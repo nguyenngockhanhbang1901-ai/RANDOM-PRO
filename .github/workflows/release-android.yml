@@ -39,12 +39,22 @@ jobs:
 
       - name: Create and sync Capacitor Android project
         run: |
-          npx cap add android
+          if [ ! -d android ]; then
+            npx cap add android
+          fi
           npx cap sync android
+
+      - name: Verify Android project
+        run: |
+          test -f android/gradlew
+          test -f android/app/build.gradle
+          chmod +x android/gradlew
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build debug APK
         run: |
-          chmod +x android/gradlew
           android/gradlew --no-daemon assembleDebug
           cp android/app/build/outputs/apk/debug/app-debug.apk "Random-Pro-${{ github.event.release.tag_name || github.ref_name }}.apk"
 
