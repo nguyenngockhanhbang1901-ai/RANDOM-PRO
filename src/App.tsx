@@ -492,8 +492,11 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-white/5 py-4 text-center text-xs text-slate-600">
-        Random Pro — Chạy offline trên máy tính & điện thoại
+      <footer className="border-t border-white/5 px-4 py-4 text-xs text-slate-600">
+        <div className="relative mx-auto flex max-w-5xl items-center justify-center">
+          <span className="text-center">Random Pro — Chạy offline trên máy tính & điện thoại</span>
+          <span className="absolute right-2 shrink-0 text-right">Cát Tường</span>
+        </div>
       </footer>
     </div>
   );
