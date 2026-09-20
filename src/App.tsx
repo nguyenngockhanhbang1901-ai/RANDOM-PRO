@@ -201,7 +201,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-white/10 bg-slate-900/90 backdrop-blur-lg">
-        <div className="mx-auto w-full max-w-5xl px-4 py-3 flex items-center justify-between">
+        <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-slate-900 font-bold text-lg shadow-lg shadow-amber-500/20">
               R
@@ -222,7 +222,7 @@ export default function App() {
 
       {/* Tab bar */}
       <nav className="sticky top-[57px] z-20 border-b border-white/10 bg-slate-900/80 backdrop-blur-lg">
-        <div className="mx-auto w-full max-w-5xl px-2 flex">
+        <div className="mx-auto max-w-5xl px-2 flex">
           {tabs.map((t) => (
             <button
               key={t.id}
@@ -241,7 +241,7 @@ export default function App() {
       </nav>
 
       {/* Content */}
-      <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-1 px-4 py-6">
+      <main className="flex-1 mx-auto w-full max-w-5xl px-4 py-6">
         {tab === 'random' && (
           <div className="space-y-4">
             <div className="lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:items-start lg:gap-5">
@@ -492,11 +492,8 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t border-white/5 px-4 py-4 text-xs text-slate-600">
-        <div className="relative mx-auto flex w-full max-w-5xl items-center justify-center">
-          <span className="text-center">Random Pro — Chạy offline trên máy tính & điện thoại</span>
-          <span className="absolute right-2 shrink-0 text-right">Cát Tường</span>
-        </div>
+      <footer className="border-t border-white/5 py-4 text-center text-xs text-slate-600">
+        Random Pro — Chạy offline trên máy tính & điện thoại
       </footer>
     </div>
   );
