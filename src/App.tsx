@@ -493,7 +493,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-white/5 py-4 text-center text-xs text-slate-600">
-        Random Pro — Chạy offline trên máy tính & điện thoại
+        Random Pro — Cát Tường
       </footer>
     </div>
   );
