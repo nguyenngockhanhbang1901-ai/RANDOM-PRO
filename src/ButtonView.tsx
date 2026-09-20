@@ -117,11 +117,11 @@ export default function ButtonView({
       {/* Result overlay */}
       {isResult && selected.length > 0 && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-[fadeIn_0.3s_ease]" onClick={() => setShowResult(false)}>
-          <div className="w-[min(90vw,760px)] max-h-[82vh] overflow-hidden rounded-[32px] border border-amber-300/70 bg-gradient-to-br from-amber-500/20 via-yellow-400/10 to-orange-500/15 p-6 shadow-[0_0_50px_rgba(251,191,36,0.18)] backdrop-blur-md sm:p-8" onClick={(e) => e.stopPropagation()}>
+          <div className="max-h-[calc(100vh-2rem)] w-[min(90vw,760px)] overflow-y-auto rounded-[32px] border border-amber-300/70 bg-gradient-to-br from-amber-500/20 via-yellow-400/10 to-orange-500/15 p-6 shadow-[0_0_50px_rgba(251,191,36,0.18)] backdrop-blur-md sm:p-8" onClick={(e) => e.stopPropagation()}>
             <div className="flex h-full flex-col items-center justify-center text-center">
               <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">Kết quả</p>
               <div
-                className="grid w-full max-w-[680px] gap-3 overflow-hidden px-1"
+                className="grid w-full max-w-[680px] gap-3 px-1"
                 style={{
                   gridTemplateColumns: selected.length > 6 ? 'repeat(auto-fit, minmax(120px, 1fr))' : selected.length > 3 ? 'repeat(auto-fit, minmax(150px, 1fr))' : 'repeat(auto-fit, minmax(170px, 1fr))',
                   alignItems: 'stretch',
