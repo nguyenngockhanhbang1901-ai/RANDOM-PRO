@@ -182,11 +182,11 @@ export default function App() {
   }, [activeList, items, activeExcludedItems, groupCount, handleGroupResult, settings.randomMode, settings.groupEffectEnabled, settings.effectDuration, settings.soundEnabled, play]);
 
   const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = [
-    { id: 'random', label: 'Random', icon: <Dices size={20} /> },
-    { id: 'groups', label: (settings.groupEffectEnabled ?? true) ? 'Chia phòng' : 'Chia nhóm', icon: <Layers size={20} /> },
-    { id: 'lists', label: 'Danh sách', icon: <ListPlus size={20} /> },
-    { id: 'history', label: 'Lịch sử', icon: <History size={20} /> },
-    { id: 'settings', label: 'Cài đặt', icon: <Settings size={20} /> },
+    { id: 'random', label: 'Random', icon: <Dices size={24} /> },
+    { id: 'groups', label: (settings.groupEffectEnabled ?? true) ? 'Chia phòng' : 'Chia nhóm', icon: <Layers size={24} /> },
+    { id: 'lists', label: 'Danh sách', icon: <ListPlus size={24} /> },
+    { id: 'history', label: 'Lịch sử', icon: <History size={24} /> },
+    { id: 'settings', label: 'Cài đặt', icon: <Settings size={24} /> },
   ];
 
   const getGroupNameFontSize = (name: string) => {
@@ -227,7 +227,7 @@ export default function App() {
             <button
               key={t.id}
               onClick={() => { setTab(t.id); play('click'); }}
-              className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs font-medium transition-all border-b-2 ${
+              className={`flex flex-1 flex-col items-center gap-1.5 whitespace-nowrap py-3 text-sm font-medium transition-all border-b-2 ${
                 tab === t.id
                   ? 'border-amber-400 text-amber-400'
                   : 'border-transparent text-slate-500 hover:text-slate-300'
